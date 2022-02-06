@@ -39,10 +39,15 @@ export default {
             
             if((num1==num2&&num1!=num3)||(num2==num3&&num2!=num1)||(num1==num3&&num1!=num2)){
                 res.innerHTML=`Com as medidas ${num1}, ${num2} e ${num3}, podemos montar um triângulo Isósceles`;
+                this.imagem='/img/isosceles.png';
+
             }else if((num1!=num2&&num1!=num3)||(num2!=num1&&num2!=num3)||(num3!=num1&&num3!=num2)){
-                res.innerHTML=`Com as medidas ${num1}, ${num2} e ${num3}, podemos montar um triângulo Escaleno`
+                res.innerHTML=`Com as medidas ${num1}, ${num2} e ${num3}, podemos montar um triângulo Escaleno`;
+                this.imagem='/img/escaleno.png';
+
             }else if(num1==num2&&num1==num3){
-                res.innerHTML=`Com as medidas ${num1}, ${num2} e ${num3}, podemos montar um triângulo Equilátero`
+                res.innerHTML=`Com as medidas ${num1}, ${num2} e ${num3}, podemos montar um triângulo Equilátero`;
+                this.imagem='/img/equilatero.png'
             }
         }
     }
@@ -52,9 +57,18 @@ export default {
 <style scoped>
 section{
     text-align: center;
+    border: 1px solid;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
 }
 
 div{
     margin: 10px;
+}
+
+img{
+    width: 350px;
 }
 </style>
